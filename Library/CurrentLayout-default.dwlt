@@ -117,12 +117,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1536
     height: 731
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 112
+=======
+    width: 1418
+    height: 666
+  m_MinSize: {x: 680, y: 492}
+  m_MaxSize: {x: 14003, y: 14042}
+  vertical: 0
+  controlID: 66
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +156,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 47
+=======
+  controlID: 67
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,7 +185,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 48
+=======
+  controlID: 68
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,10 +289,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1210
     y: 0
+<<<<<<< HEAD
     width: 326
     height: 731
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    width: 301
+    height: 666
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -399,9 +423,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 32f9ffff86faffff
+=======
+      m_SelectedIDs: 983c0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 52fbffff
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -463,7 +493,11 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 96.52912, y: -5.206167, z: -135.59004}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: 96.52912, y: -5.206167, z: -135.59004}
+=======
+    m_Value: {x: 0, y: 0, z: 0}
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -512,11 +546,15 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_Size:
     m_Target: 441.34232
     speed: 2
+<<<<<<< HEAD
     m_Value: 422.33716
+=======
+    m_Value: 10
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -657,22 +695,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+    - Assets
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scenes
+=======
+  - Assets
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sstepanek\Desktop\CubeGame\CubeGame-TheRealMidterm
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b23e0000
     m_LastClickedID: 16050
     m_ExpandedIDs: 00000000a43e000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 4}
+    m_SelectedIDs: 243d0000
+    m_LastClickedID: 15652
+    m_ExpandedIDs: 00000000243d000000ca9a3b
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -700,7 +753,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000a43e0000
+=======
+    m_ExpandedIDs: 00000000243d0000
+>>>>>>> f5ebbadba9c8eca844b8607c0be9c40bbbe783e8
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -841,7 +898,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 855.1385
+  m_LastVerticalScrollValue: 765.0462
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0

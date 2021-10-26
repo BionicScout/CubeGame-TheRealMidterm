@@ -4,14 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Player
+    public GameObject player;
     public Rigidbody rb;
+    Vector3 startPos;
+
+    //Speed
     public float Speed = 25f;
     public float PlayerMotion = 25f;
 
-    public bool hasShield = false;
-
+    //Jump
     int jumpTicks = 0;
     public int maxJump = 0;
+
+    //Shield
+    public GameObject shieldPrefab;
+    GameObject shield;
+    bool hasShield = false;
+
+    //Reset List
+    List<GameObject> moved = new List<GameObject>();
+
+    private void Start()
+    {
+        startPos = player.transform.position;
+    }
 
     private void Update()
     {
@@ -21,6 +38,18 @@ public class PlayerMovement : MonoBehaviour
             jumpTicks--;
 
             Debug.Log("jump");
+        }
+
+        if (Input.GetButtonUp("Restart"))
+        {
+            restart();
+            Debug.Log("Restart");
+        }
+
+        if (player.transform.position.y < -5)
+        {
+            restart();
+            Debug.Log("Fell Off");
         }
     }
 
@@ -57,23 +86,77 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Jump()
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        jumpTicks = maxJump;
+
+        if (collisionInfo.gameObject.CompareTag("ShieldPickUp"))
+        {
+            //Move PickUp Below Level
+            Vector3 temp = collisionInfo.gameObject.transform.position;
+            collisionInfo.gameObject.transform.position = new Vector3(temp.x, temp.y - 5, temp.z);
+
+            moved.Add(collisionInfo.gameObject);
+
+            //Add Shield
+            temp = player.transform.position;
+            shield = Instantiate(shieldPrefab, new Vector3(temp.x, 0, temp.z), Quaternion.identity);
+            shield.transform.parent = player.transform;
+
+            hasShield = true;
+            Debug.Log("Got Shield");
+        }
+
+        if (collisionInfo.collider.tag == "Obstical")
+        {
+            if (hasShield) //If Player Has Shiled they keep going
+            {
+                //Move obsticle below scene
+                Vector3 temp = collisionInfo.gameObject.transform.position;
+                collisionInfo.gameObject.transform.position = new Vector3(temp.x, temp.y - 5, temp.z);
+                Debug.Log("Protected");
+
+                moved.Add(collisionInfo.gameObject);
+
+                //Deal with Shield
+                Destroy(shield);
+                hasShield = false;
+            }
+            else
+            { //else Fail
+                enabled = false;
+                Debug.Log("Dead");
+
+                restart();
+            }
+        }
+
+        if (collisionInfo.gameObject.CompareTag("JumpPad"))
+        {
+            jumpTicks = maxJump;
+            Debug.Log("Jump");
+        }
     }
 
-    public void Restart()
+    void restart()
     {
+
+        player.transform.position = startPos;
+        player.transform.Rotate(0.0f, 0.0f, 0.0f, Space.Self);
+
+        Debug.Log("Restart");
+        for (int i = 0; i < moved.Count; i++)
+        {
+            Vector3 temp = moved[i].transform.position;
+            moved[i].transform.position = new Vector3(temp.x, temp.y + 5, temp.z);
+            Debug.Log("Protected");
+        }
+
+        Destroy(shield);
+        hasShield = false;
+
+        moved.Clear();
+
         rb.velocity = Vector3.zero;
-    }
-
-    public void setShield(bool shield)
-    {
-        hasShield = shield;
-    }
-
-    public bool getShield()
-    {
-        return hasShield;
+        enabled = true;
     }
 }
