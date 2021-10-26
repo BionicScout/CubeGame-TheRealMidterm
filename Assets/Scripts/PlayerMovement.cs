@@ -10,12 +10,12 @@ public class PlayerMovement : MonoBehaviour
     Vector3 startPos;
 
     //Speed
-    public float Speed = 25f;
-    public float PlayerMotion = 25f;
+    float Speed = 25f;
+    float PlayerMotion = 25f;
 
     //Jump
     int jumpTicks = 0;
-    public int maxJump = 0;
+    int maxJump = 20;
 
     //Shield
     public GameObject shieldPrefab;
