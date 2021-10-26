@@ -56,7 +56,6 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Music.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
-    <Compile Include="Assets\Scripts\PlayerCollition.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
